@@ -1,0 +1,14 @@
+[Unit]
+Description=Light Tower service
+After=network.target
+
+[Service]
+ExecStart=/home/pi/Code/start_light_tower.sh
+WorkingDirectory=/home/pi/Code
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
