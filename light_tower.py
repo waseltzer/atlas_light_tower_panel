@@ -9,10 +9,12 @@ import subprocess
 
 # Hardware connections:
 GPIO.setmode(GPIO.BOARD) #use board pin numbers
+
 ledpin = 13
 whitebuttonpin = 12
 pirpin = 11
 redbuttonpin = 15
+
 GPIO.setup(ledpin, GPIO.OUT)
 # set up as inputs, pulled up to avoid false detection.
 # Both ports are wired to connect to GND on button press.
