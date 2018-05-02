@@ -4,6 +4,7 @@
 # https://github.com/waseltzer/atlas_light_tower_panel
 # http://btulab.com/atlas-tower-light
 # sergio.rivera@colorado.edu
+# wayne.seltzer@colorado.edu
 
 import sys
 import time
