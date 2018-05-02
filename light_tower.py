@@ -52,7 +52,7 @@ keyframes = {
 	'white blue': {'frame':'k0r255g255b255m2t01000k1r000g000b255m2t01000F'},
 	'red green': {'frame':'k0r255g000b000m2t01000k1r000g255b000m2t01000F'},
 	'red white': {'frame':'k0r255g000b000m1t00500k1r255g255b255m1t00500F'},
-	'flash': {'frame':'k0r255g255b255m1t00100k1r000g000b000m1t00100F'},
+	'white white flash ': {'frame':'k0r255g255b255m1t00100k1r000g000b000m1t00100F'},
 	'off': {'frame':'k0r000g000b000m2t01000F'}
 }
 
