@@ -1,5 +1,10 @@
 #!/usr/bin/python -u
 
+# ATLAS Institute Light Tower Panel project
+# https://github.com/waseltzer/atlas_light_tower_panel
+# http://btulab.com/atlas-tower-light
+# sergio.rivera@colorado.edu
+
 import sys
 import time
 import RPi.GPIO as GPIO
