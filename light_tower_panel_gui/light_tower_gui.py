@@ -1,4 +1,3 @@
-from tkinter import *
 
 #!/usr/bin/python -u
 
@@ -7,6 +6,10 @@ from tkinter import *
 # http://btulab.com/atlas-tower-light
 # sergio.rivera@colorado.edu
 # wayne.seltzer@colorado.edu
+
+# GUI version based on tkinter; GPIO code commented out
+
+import tkinter as tk
 
 import sys
 import time
@@ -145,12 +148,12 @@ log("Light Tower startup")
     #     #GPIO.cleanup()       # clean up GPIO on CTRL+C exit
     #     sys.exit()
 
-window = Tk()
+window = tk.Tk()
 window.title("ATLAS Light Tower panel emulator")
 window.geometry('640x450')
-lbl_1 = Label(window, text="Push the white and red buttons to")
-lbl_2 = Label(window, text="change the ATLAS light tower lights.")
-lbl_3 = Label(window, text="Information: http://btulab.com/atlas-tower-light")
+lbl_1 = tk.Label(window, text="Push the white and red buttons to")
+lbl_2 = tk.Label(window, text="change the ATLAS light tower lights.")
+lbl_3 =tk. Label(window, text="Information: http://btulab.com/atlas-tower-light")
 lbl_1.config(font=("Arial", 16))
 lbl_2.config(font=("Arial", 16))
 lbl_3.config(font=("Arial", 16))
@@ -158,12 +161,12 @@ lbl_1.grid(column=0, row=0, columnspan=2)
 lbl_2.grid(column=0, row=1, columnspan=2)
 lbl_3.grid(column=0, row=2, columnspan=2)
 
-photo_whitebutton=PhotoImage(file="white_button.png")
-btn_white = Button(window, image=photo_whitebutton,command = my_callback_whitebutton)
+photo_whitebutton=tk.PhotoImage(file="white_button.png")
+btn_white = tk.Button(window, image=photo_whitebutton,command = my_callback_whitebutton)
 btn_white.grid(column=0, row=3)
 
-photo_redbutton=PhotoImage(file="red_button.png")
-btn_red = Button(window, image=photo_redbutton,command = my_callback_redbutton)
+photo_redbutton=tk.PhotoImage(file="red_button.png")
+btn_red = tk.Button(window, image=photo_redbutton,command = my_callback_redbutton)
 btn_red.grid(column=1, row=3)
 
 window.mainloop()
