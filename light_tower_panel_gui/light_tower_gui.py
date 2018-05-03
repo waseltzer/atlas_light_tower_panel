@@ -1,4 +1,3 @@
-
 #!/usr/bin/python -u
 
 # ATLAS Institute Light Tower Panel project
@@ -55,16 +54,16 @@ redbuttonpin = 15
 URL = "https://atlas-tower.herokuapp.com/keyStatus"
 
 keyframes = {
-	'red': {'frame':'k0r255g000b000m2t01000F'},
-	'green': {'frame':'k0r000g255b000m2t01000F'},
-	'blue': {'frame':'k0r000g000b255m2t01000F'},
-	'white': {'frame':'k0r255g255b255m2t01000F'},
-	'red blue': {'frame':'k0r255g000b000m2t03000k1r000g000b255m2t03000F'},
-	'white blue': {'frame':'k0r255g255b255m2t01000k1r000g000b255m2t01000F'},
-	'red green': {'frame':'k0r255g000b000m2t01000k1r000g255b000m2t01000F'},
-	'red white': {'frame':'k0r255g000b000m1t00500k1r255g255b255m1t00500F'},
-	'white white flash ': {'frame':'k0r255g255b255m1t00100k1r000g000b000m1t00100F'},
-	'off': {'frame':'k0r000g000b000m2t01000F'}
+    'red': {'frame':'k0r255g000b000m2t01000F'},
+    'green': {'frame':'k0r000g255b000m2t01000F'},
+    'blue': {'frame':'k0r000g000b255m2t01000F'},
+    'white': {'frame':'k0r255g255b255m2t01000F'},
+    'red blue': {'frame':'k0r255g000b000m2t03000k1r000g000b255m2t03000F'},
+    'white blue': {'frame':'k0r255g255b255m2t01000k1r000g000b255m2t01000F'},
+    'red green': {'frame':'k0r255g000b000m2t01000k1r000g255b000m2t01000F'},
+    'red white': {'frame':'k0r255g000b000m1t00500k1r255g255b255m1t00500F'},
+    'white white flash ': {'frame':'k0r255g255b255m1t00100k1r000g000b000m1t00100F'},
+    'off': {'frame':'k0r000g000b000m2t01000F'}
 }
 
 def send_to_light_tower(kf):
@@ -103,7 +102,7 @@ def my_callback_whitebutton( ):
     speak('Done',True)
 
 def my_callback_pir( ):
-#    log("motion detected")
+    #log("motion detected")
     subprocess.Popen(['aplay -q -D sysdefault:CARD=1 /home/pi/Code/sonar-ping.wav'], shell=True)
 
 keyframekey=0
