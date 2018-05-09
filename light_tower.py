@@ -1,4 +1,4 @@
-#!/usr/bin/python -u
+/#!/usr/bin/python -u
 
 # ATLAS Institute Light Tower Panel project
 # https://github.com/waseltzer/atlas_light_tower_panel
@@ -73,7 +73,7 @@ def send_to_light_tower(kf):
     print('Error code: ' + str(r.raise_for_status()))
 
 def speak(s,wait):  # espeak string s, wait for audio to complete if wait is True
-    cmd = 'espeak \"' + s + '\" ' + '-s120 -vmb-us2 --stdout | aplay -q -D sysdefault:CARD=1'
+    cmd = 'espeak \"' + s + '\" ' + '-s120 -vmb-us1 --stdout | aplay -q -D sysdefault:CARD=1'
     p = subprocess.Popen([cmd], shell=True)
     if wait: # wait for audio to complete
         p.wait()
@@ -109,7 +109,7 @@ def my_callback_redbutton(channel):
         keyframekey = 0
     kf = list(keyframes.keys())[keyframekey]
     print("Color: ", kf)
-    speak('Selected color ' + kf,True)
+    speak('Color ' + kf,True)
 
 # when a falling edge is detected on buttonpin, regardless of whatever
 # else is happening in the program, the function my_callback_button will be run
@@ -117,7 +117,7 @@ GPIO.add_event_detect(whitebuttonpin, GPIO.FALLING,callback=my_callback_whitebut
 GPIO.add_event_detect(pirpin, GPIO.FALLING, callback=my_callback_pir, bouncetime=10000)
 GPIO.add_event_detect(redbuttonpin, GPIO.FALLING, callback=my_callback_redbutton, bouncetime=500)
 
-# Main program:
+# Main program
 print ("===================================================================================================")
 log("Light Tower startup")
 
@@ -125,7 +125,7 @@ log("Light Tower startup")
 GPIO.output(ledpin, GPIO.LOW)
 
 # Set the sound volume level
-subprocess.Popen(['amixer -q -c 1 set PCM -- 500'], shell=True)
+subprocess.Popen(['amixer -q -c 1 set PCM -- 190'], shell=True)
   
 # set an initial light tower keyframe
 send_to_light_tower('red green') #set initial keyframes
