@@ -1,4 +1,4 @@
-/#!/usr/bin/python -u
+#!/usr/bin/python -u
 
 # ATLAS Institute Light Tower Panel project
 # https://github.com/waseltzer/atlas_light_tower_panel
